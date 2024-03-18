@@ -1,0 +1,127 @@
+header {
+    /* background-image: url(); */
+    background-color: rgb(240, 240, 240);
+    /* background-color: rgb(250, 250, 250); */
+    margin: 10px 10px 10px 10px;
+}
+
+#main_title {
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    text-align: center;
+    font-size: 500%;
+    font-weight: 10;
+    margin: 30px;
+    display: block;
+
+}
+
+
+
+
+/* メニューバー 処理*/
+#memu_nav {
+    width: 100%;
+    height: 70px;
+    background-color: dimgray;
+    padding-top: 5px;
+    box-sizing: border-box;
+
+}
+
+#memu_ul {
+    display: flex;
+    justify-content: center;
+}
+
+.memu_li {
+    list-style: none;
+}
+
+header a {
+
+    display: block;
+    text-decoration: none;
+    color: white;
+    margin-left: 30px;
+    margin-right: 30px;
+}
+
+/* ホーム　処理 */
+#main_home {
+
+    background-color: rgb(240, 240, 240);
+    padding: 0px 20px 20px 20px;
+    margin: 10px 10px 10px 10px;
+
+}
+
+/* プロフィール　処理*/
+#main_profile {
+    background-color: rgb(240, 240, 240);
+    padding: 0px 20px 20px 20px;
+    margin: 10px 10px 10px 10px;
+}
+
+.sub_h2 {
+    padding: 0.4em 0.5em;
+    /*文字の上下 左右の余白*/
+    color: #494949;
+    /*文字色*/
+    background: #ffffff;
+    /*背景色*/
+    border-left: solid 5px #7db4e6;
+    /*左線*/
+    border-bottom: solid 3px #d7d7d7;
+    /*下線*/
+}
+
+/* タグず　処理 */
+#main_tags {
+    background-color: rgb(240, 240, 240);
+    margin: 10px 10px 10px 10px;
+
+}
+
+#main_tags_h2 {
+    margin: 10px 10px 10px 19px;
+}
+
+#main_tags_no_1 {
+    border: 4px solid #000;
+    margin: 10px 10px 10px 19px;
+
+}
+
+#img_tags_no_1 {
+    width: 300px;
+    height: 150px;
+    text-decoration: none;
+    display: block;
+    margin: 0 auto;
+}
+
+#main_tags a {
+    text-decoration: none;
+    color: #000000;
+
+}
+
+#article_no_1_h2 {
+    text-align: center;
+    display: block;
+    margin: 0 auto;
+
+
+}
+
+
+
+/* フッター　処理 */
+footer {
+    background-color: rgb(240, 240, 240);
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    text-align: center;
+    margin: 10px 10px 10px 10px;
+    font-size: 30px;
+
+}
