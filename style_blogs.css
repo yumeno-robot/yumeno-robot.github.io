@@ -1,12 +1,14 @@
 .blogs_div {
     background-color: rgb(25, 25, 25);
     width: 40%;
-    height: 30%;
+    height: 300%;
     margin-inline: auto;
     text-align: center;
     border-radius: 10%;
     /* display: inline-block; */
 }
+
+
 
 #article_h2 {
     font-family: Georgia, 'Times New Roman', Times, serif;
