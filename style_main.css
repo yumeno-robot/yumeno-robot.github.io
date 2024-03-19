@@ -45,13 +45,29 @@ a {
 
 }
 
+/* 記事の設定(artcle || section) */
+#all_section {
+    width: 700px;
+    height: 100%;
+    margin: auto;
+    background-color: rgb(73, 73, 73);
+    padding: 5px 20px 10px 40px;
+}
+
+@media screen and (max-width:750px) {
+    #all_section {
+        margin: 15px;
+        width: auto;
+        height: auto;
+        background-color: rgb(73, 73, 73);
+    }
+}
+
 
 
 /* footer 処理 */
 #main_footer {
-
     background: rgb(22, 22, 22);
-
     position: -20 fixed;
     margin-inline: auto;
 }
