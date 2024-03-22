@@ -25,6 +25,7 @@
 
     display: inline;
     display: flex;
+    padding: 0px 10% 20px;
 }
 
 #blogs_article_div>img {
