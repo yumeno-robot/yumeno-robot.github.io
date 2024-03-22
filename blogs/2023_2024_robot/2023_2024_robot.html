@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>yumeno-robot</title>
+    <meta name="author" content="yumeno-robot" />
+    <meta name="description" content="yumeno-robotのBlogです!" />
+    <meta name="keywords" content="yumeno-robot,robot,ロボット,ロボカップ,ライトウェイト" />
+    <link rel="icon" href="/images/232.jpg" />
+    <link rel="stylesheet" href="/style_main.css">
+    <link rel="stylesheet" href="/style_blogs.css">
+    <link rel="stylesheet" href="/style_index.css">
+    <link rel="stylesheet" href="/style_links.css">
+    <link rel="stylesheet" href="/blogs/2023_2024_robot/2023_2024_robot.css">
+</head>
+
+<body>
+    <header>
+        <nav id="main_menu_nav">
+            <ul id="main_menu_ul">
+                <!-- <li class="main_menu_li"> -->
+                <!-- <a href="/index.html"> -->
+                <!-- <img src="/images/home_1.jpg" alt="画像" width="10%" height="10%"> -->
+                <!-- yumeno-robot -->
+                <!-- </a> -->
+                <!-- </li> -->
+                <li class="main_menu_li"><a href="/index.html">Home</a></li>
+                <li class="main_menu_li"><a href="/blogs.html">Blogs</a></li>
+                <li class="main_menu_li"><a href="/links.html">Links</a></li>
+            </ul>
+        </nav>
+        <!-- <img src="/images/home_2.png" alt="ホーム画像" width="500%" height="200px"> -->
+        <a href="/index.html">
+            <h1 id="main_h1">yumeno-robot</h1>
+        </a>
+    </header>
+    <main>
+
+        <section id="all_section">
+            <h2 id="blogs_h2">Blogs</h2>
+            <hr>
+            <div id="blogs_top">
+                <h3 id="blogs_h3"> 2023 2024年 ロボット紹介</h3>
+                <img src="/blogs/2023_2024_robot/S__11239428.jpg" alt="">
+                <hr>
+            </div>
+
+            <div>
+                <h3 class="blogs_article_h3">メンバー</h3>
+                <p>
+                    リーダー&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;@yumeno_robot<br>
+                    副リーダー&emsp;&emsp;&emsp;&emsp;&emsp;@yamake_0909<br>
+                    愉快な仲間たち１&emsp;&emsp;@tacopic007<br>
+                    愉快な仲間たち２&emsp;&emsp;@Maehi_Maehi<br>
+                    愉快な仲間たち３ &emsp;&emsp;&emsp;&emsp;不明<br>
+                </p>
+                <p>クリックしてフォローしていただけると幸いです。</p>
+                <hr>
+            </div>
+
+            <div>
+                <h3 class="blogs_article_h3">注意</h3>
+                <p>
+                    ・以下の文を読んでわかる通りこのページでは、情報公開など言った素晴らしいことは書いていません。
+                    私たちの思い出が残ればなーと思い残しました。 <br>
+                    参考にできるところがあればどうぞ！
+                </p>
+                <hr>
+            </div>
+
+
+            <div id="abaut_2023_robot_div">
+                <h3 class="blogs_article_h3">2023年度ロボットについて</h3>
+                <img src="/blogs/2023_2024_robot/1671714243354.jpg" alt="">
+                <img src="/blogs/2023_2024_robot/1671714246619.jpg" alt="">
+                <h3>
+                    <ハードウェア>
+                </h3>
+                <p id="abaut_2023_robot__hadowea">
+                    メインマイコン&emsp;&emsp;&emsp;Arduino mega 2560<br>
+                    モータードライバー&emsp; 6CHモーターコントローラー<br>
+                    IRセンサー&emsp;&emsp;&emsp;&emsp;&emsp;シングルパルスボールセンサー<br>
+                    ラインセンサー&emsp;&emsp;&emsp; ホワイトラインセンサー<br>
+                    モーター&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;ロボサイトモーター15:1<br>
+                    コンパスセンサー&emsp;&emsp;9軸デジタルコンパス<br>
+                    ユニバーサル基盤&emsp;&emsp;72*95*1.6t
+                </p>
+                <p>
+                    ・ボールをキープする面積を大きくするためモーターの設置角度を120度に設定した。<br>
+                    ・ボールの角度のを計算しやすくするためirセンサーの周りにカバーをつけてバグを抑ええた。<br>
+                    ・基盤をユニバーサル基盤にすることでコストを削減した。<br>
+                    ・土台にmdfを使うことによって簡単に加工できるようにした。<br>
+                </p>
+
+                <h3>
+                    <ソフトウェア>
+                </h3>
+                <p>
+                    ・当時は三角関数やベクトルのことも知らなかったため、センサーから読み取った値を変数に代入し、
+                    モーターでばーーと回してる感じでした。<br>
+                    プログラムファイルも1つでしたし関数もmein関数1つで回していたのでメンテナンス性が皆無でもう大変。
+                    一様Githubにプログラム乗っけておきますねw
+                </p>
+                <p>
+                    ⇩ ⇩ ⇩ ⇩ ⇩ ⇩ ⇩ ⇩ ⇩ ⇩ ⇩ ⇩ <br>
+                    <a href="https://github.com/yumeno-robot/junior-high-school_event_program/
+                tree/main/2023_%E9%96%A2%E6%9D%B1%E5%A4%A7%E4%BC%9A__%E3%83%97%E3%83%AD%
+                E3%82%B0%E3%83%A9%E3%83%A0">2023関東大会プログラム</a><br>
+                    ⇧ ⇧ ⇧ ⇧ ⇧ ⇧ ⇧ ⇧ ⇧ ⇧ ⇧ ⇧
+
+                </p>
+
+
+                <hr>
+
+            </div>
+
+
+            <div id="abaut_2024_robot_div">
+                <h3 class="blogs_article_h3">2024年度ロボットについて</h3>
+                <img src="/blogs/2023_2024_robot/IMG_0209.jpg" alt="">
+                <img src="/blogs/2023_2024_robot/IMG_0207.jpg" alt="">
+
+                <h3>
+                    <ハードウェア>
+                </h3>
+                <p id="abaut_2023_robot__hadowea">
+                    メインマイコン&emsp;&emsp;&emsp;Arduino mega 2560<br>
+                    モータードライバー&emsp; 6CHモーターコントローラー<br>
+                    IRセンサー&emsp;&emsp;&emsp;&emsp;&emsp;シングルパルスボールセンサー<br>
+                    ラインセンサー&emsp;&emsp;&emsp; ホワイトラインセンサー<br>
+                    モーター&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;ロボサイトモーター15:1<br>
+                    ジャイロセンサー&emsp;&emsp;MPU6050<br>
+                    スピーカー&emsp;&emsp;&emsp;&emsp;&emsp;圧電スピーカー<br>
+                    ユニバーサル基盤&emsp;&emsp;72*95*1.6t
+                </p>
+
+                <p>
+                    ・コンパスセンサーからジャイロセンサーに変更し会場によってプログラムを変更しないで済むようにした。<br>
+                    ・白線を検出した場合音を出すようにしプログラムが正常化どうか簡単に確かめられるようにした。<br>
+                    ・モーターの取り付け角度を90度にしベクトルの計算をしやすくした。<br>
+                    ・スペンサーをプラスチック製にすることによりロボットの軽量化を図った。<br>
+
+                </p>
+
+                <h3>
+                    <ソフトウェア>
+                </h3>
+                <p>
+                    ・cppのclass機能を使いヘッダファイルを作製しプログラムのメンテナンス性を向上させた。<br>
+                    ・三角関数やベクトルを使用することにより正確にロボットを動かすことが可能になった。<br>
+                    ・関数とプログラムファイルをある程度グループ分けすることにより読みやすくした。<br>
+                </p>
+                <p>
+                    ⇩ ⇩ ⇩ ⇩ ⇩ ⇩ ⇩ ⇩ ⇩ ⇩ ⇩ ⇩ <br>
+                    <a href="https://github.com/yumeno-robot/junior-high-school_event_program/
+                    tree/main/2024_%E9%96%A2%E6%9D%B1%E5%A4%A7%E4%BC%9A__%E3%83%97%E3%83%AD%E3%
+                    82%B0%E3%83%A9%E3%83%A0">2024関東大会プログラム</a><br>
+                    ⇧ ⇧ ⇧ ⇧ ⇧ ⇧ ⇧ ⇧ ⇧ ⇧ ⇧ ⇧
+                </p>
+
+                <hr>
+            </div>
+
+
+            <div>
+                <h3 class="blogs_article_h3">最後に</h3>
+                <p>
+                    ・githubにプログラムを載せていますがファイル管理ができていませんねw
+                    文句を言わないでほしいなーー<br>
+                </p>
+                <p>
+                    ・これからもblogに情報を載せていくのでよろしくお願いします!
+                </p>
+
+            </div>
+
+
+
+
+
+
+
+        </section>
+
+
+        <footer id="main_footer">
+            <p id="main_footer_P">yumeno-robot</p>
+        </footer>
+
+    </main>
+
+
+
+
+</body>
+
+</html>

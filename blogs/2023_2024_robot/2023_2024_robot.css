@@ -1,0 +1,29 @@
+#blogs_top>img {
+
+    width: 60%;
+    height: auto;
+    padding: 0px 20% 0px 20%;
+}
+
+.blogs_article_h3 {
+    border-left: 7px solid white;
+    padding-left: 20px;
+}
+
+#abaut_2023_robot_div>img,
+#abaut_2024_robot_div>img {
+    height: auto;
+    width: 40%;
+    padding-left: 5%;
+}
+
+p {
+    padding-left: 20px;
+}
+
+#abaut_2023_robot__hadowea {
+    border: 2px solid #aaa;
+    padding: 2em;
+    border-radius: 15px;
+
+}
