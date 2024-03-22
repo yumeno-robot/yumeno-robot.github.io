@@ -32,3 +32,12 @@ p {
     font-size: 100%;
 
 }
+
+
+@media screen and (max-width:400px) {
+
+    #abaut_2023_robot__menber_a>a {
+        font-size: 10px;
+
+    }
+}
