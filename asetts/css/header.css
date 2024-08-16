@@ -57,7 +57,7 @@
 }
 
 .text-overlay {
-    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-family: Georgia, 'Times New Roman', Times, sans-serif;
     position: absolute;
     top: 50%;
     left: 50%;
@@ -88,7 +88,6 @@
 
 .slide {
     min-width: 100%;
-    box-sizing: border-box;
 }
 
 

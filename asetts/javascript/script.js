@@ -3,7 +3,7 @@ showSlides();
 
 function showSlides() {
     let slides = document.getElementsByClassName("slide");
-    let slideshowContainer = document.querySelector(".slideshow-container");
+    let slideshowContainer = document.getElementsByClassName("slideshow-container");
     let dots = document.getElementsByClassName("dot");
 
     slideIndex++;
@@ -19,7 +19,7 @@ function showSlides() {
     dots[slideIndex - 1].className += " active";
 
     // 次のスライドに切り替える
-    setTimeout(showSlides, 20000); // 10秒ごとにスライドを自動的に変更
+    setTimeout(showSlides, 10000); // 10秒ごとにスライドを自動的に変更
 }
 
 function currentSlide(n) {
