@@ -3,7 +3,7 @@ showSlides();
 
 function showSlides() {
     let slides = document.getElementsByClassName("slide");
-    let slideshowContainer = document.querySelector".slideshow-container");
+    let slideshowContainer = document.querySelector(".slideshow-container");
     let dots = document.getElementsByClassName("dot");
 
     slideIndex++;
