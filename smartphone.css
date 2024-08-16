@@ -1,0 +1,39 @@
+@media screen and (max-width:1000px) {
+    #all_section {
+
+        width: auto;
+        height: auto;
+    }
+
+    #home_h2 {
+        font-size: 30px;
+        margin-bottom: 50px;
+        text-align: center;
+    }
+
+
+    .article_design {
+
+        margin: 5px 0px 50px 0px;
+    }
+
+
+    .menu-links a {
+        color: white;
+        text-decoration: none;
+        font-size: 10px;
+    }
+
+    .site-title {
+        color: white;
+        font-size: 10px;
+        font-weight: bold;
+    }
+
+    .icon {
+        width: 30px;
+        padding: 1px;
+        border-radius: 50%;
+        background: linear-gradient(to right bottom, #1d04fa, #6ff5ff);
+    }
+}

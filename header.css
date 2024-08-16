@@ -1,0 +1,121 @@
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: linear-gradient(to bottom right, #000000, #00076e);
+    /* グラデーションの色と方向 */
+    padding: 10px 20px;
+}
+
+.logo-section {
+    display: flex;
+    align-items: center;
+}
+
+.icon {
+    width: 50px;
+    padding: 5px;
+    border-radius: 50%;
+    background: linear-gradient(to right bottom, #000000, #2d0af1);
+}
+
+.logo-section a {
+    text-decoration: none;
+}
+
+.site-title {
+    color: white;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.menu-links {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+.menu-links li {
+    margin-left: 30px;
+}
+
+.menu-links a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+.menu-links a:hover {
+    text-decoration: underline;
+}
+
+.hero-section {
+    position: relative;
+    max-width: 100%;
+    overflow: hidden;
+}
+
+.text-overlay {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 6vw;
+    font-weight: bold;
+    color: white;
+    white-space: nowrap;
+    animation: slideIn 3s forwards;
+}
+
+@keyframes slideIn {
+    from {
+        transform: translate(-150%, -50%);
+    }
+
+    to {
+        transform: translate(-50%, -50%);
+    }
+}
+
+.slideshow-container {
+    display: flex;
+    width: 100%;
+    transition: transform 1s ease-in-out;
+    /* スライドアニメーションのスムーズさ */
+}
+
+.slide {
+    min-width: 100%;
+    box-sizing: border-box;
+}
+
+
+.slide-image {
+    width: 100%;
+    height: auto;
+}
+
+
+.dots {
+    text-align: center;
+    padding: 10px 0;
+    position: absolute;
+    bottom: 10px;
+    width: 100%;
+}
+
+.dot {
+    height: 15px;
+    width: 15px;
+    margin: 0 5px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+}
+
+.active {
+    background-color: #717171;
+}

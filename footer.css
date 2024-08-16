@@ -1,0 +1,12 @@
+/* footer 処理 */
+#main_footer {
+    background: rgb(22, 22, 22);
+    position: -20 fixed;
+    margin-inline: auto;
+}
+
+#main_footer_P {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    text-align: center;
+    padding: 10px;
+}
