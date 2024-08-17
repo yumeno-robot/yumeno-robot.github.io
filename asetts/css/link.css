@@ -1,29 +1,83 @@
-.link-container {
+.navbar {
+    background-color: #1c1c1c;
+    padding: 10px20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 50px;
+    /* メニューバーとリンクアイテムの間に隙間を追加 */
+}
+
+.logo-section {
+    display: flex;
+    align-items: center;
+}
+
+.logo-section.icon {
+    width: 40px;
+    height: 40px;
+    margin-right: 10px;
+}
+
+.site-title {
+    font-size: 24px;
+    color: #ffffff;
+}
+
+.menu-links {
+    list-style: none;
     display: flex;
     gap: 20px;
 }
 
+.menu-linksa {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 16px;
+    transition: color 0.3s;
+}
+
+.menu-linksa:hover {
+    color: #f39c12;
+}
+
+.link-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+    padding: 020px50px;
+    /* リンクコンテナの下にも隙間を追加 */
+}
+
 .link-item {
+    background-color: #1c1c1c;
+    border-radius: 10px;
+    padding: 20px;
     text-align: center;
+    width: 120px;
     transition: transform 0.3s, box-shadow 0.3s;
 }
 
+.link-item:hover {
+    transform: translateY(-10px);
+    box-shadow: 010px20pxrgba(0, 0, 0, 0.5);
+}
+
 .link-icon {
-    width: 100px;
-    height: 100px;
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    margin-bottom: 10px;
     transition: box-shadow 0.3s;
 }
 
 .link-name {
+    font-size: 16px;
     margin-top: 10px;
-    font-size: 14px;
     color: #ffffff;
 }
 
 .link-item:hover.link-icon {
     box-shadow: 04px8pxrgba(0, 0, 0, 0.3);
-}
-
-.link-item:hover {
-    transform: translateY(-5px);
 }
