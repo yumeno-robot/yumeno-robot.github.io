@@ -3,49 +3,6 @@ h1 {
 
 }
 
-.navbar {
-    background-color: #1c1c1c;
-    padding: 10px20px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 50px;
-    /* メニューバーとリンクアイテムの間に隙間を追加 */
-}
-
-.logo-section {
-    display: flex;
-    align-items: center;
-}
-
-.logo-section.icon {
-    width: 40px;
-    height: 40px;
-    margin-right: 10px;
-}
-
-.site-title {
-    font-size: 24px;
-    color: #ffffff;
-}
-
-.menu-links {
-    list-style: none;
-    display: flex;
-    gap: 20px;
-}
-
-.menu-linksa {
-    color: #ffffff;
-    text-decoration: none;
-    font-size: 16px;
-    transition: color 0.3s;
-}
-
-.menu-linksa:hover {
-    color: #f39c12;
-}
-
 .link-container {
     display: flex;
     flex-wrap: wrap;
