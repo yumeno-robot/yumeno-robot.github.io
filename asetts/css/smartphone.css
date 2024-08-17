@@ -1,23 +1,4 @@
 @media screen and (max-width:1000px) {
-    #all_section {
-
-        width: auto;
-        height: auto;
-    }
-
-    #home_h2 {
-        font-size: 30px;
-        margin-bottom: 50px;
-        text-align: center;
-    }
-
-
-    .article_design {
-
-        margin: 5px 0px 50px 0px;
-    }
-
-
     .menu-links a {
         color: white;
         text-decoration: none;

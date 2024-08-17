@@ -24,14 +24,16 @@ header {
 
 /* メイン文 */
 
-#home_h2 {
-    font-size: 45px;
+.home_h2 {
+    font-size: 50px;
     margin-top: 50px;
     text-align: center;
 }
 
-#all_section {
-    margin: 0px 10vw 0px 10vw;
+
+.article_design {
+    margin: 0px 0px 100px 150px;
+    padding: 0 10px 0 0;
 }
 
 .second_h2 {
@@ -44,6 +46,36 @@ header {
     /*左線*/
 }
 
-.article_design {
-    margin: 100px 0px 10vw 100px;
+
+
+
+
+@media screen and (max-width:1000px) {
+    .home_h2 {
+        font-size: 35px;
+        margin-top: 35px;
+        text-align: center;
+    }
+
+
+
+
+
+    .article_design {
+        margin: 0px 0px 50px 35px;
+        padding: 0 10px 0 0;
+    }
+
+
+    .second_h2 {
+        margin: 0 0 0 0;
+        padding: 0.25em 0.5em;
+        /*上下 左右の余白*/
+        /*文字色*/
+        background: transparent;
+        /*背景透明に*/
+        border-left: solid 5px #7db4e6;
+        /*左線*/
+    }
+
 }
