@@ -1,0 +1,29 @@
+.link-container {
+    display: flex;
+    gap: 20px;
+}
+
+.link-item {
+    text-align: center;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.link-icon {
+    width: 100px;
+    height: 100px;
+    transition: box-shadow 0.3s;
+}
+
+.link-name {
+    margin-top: 10px;
+    font-size: 14px;
+    color: #ffffff;
+}
+
+.link-item:hover.link-icon {
+    box-shadow: 04px8pxrgba(0, 0, 0, 0.3);
+}
+
+.link-item:hover {
+    transform: translateY(-5px);
+}
