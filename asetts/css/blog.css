@@ -5,25 +5,20 @@
 }
 
 
-
-
 .menu-container {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    /* アイテムを中央揃えにする */
     gap: 20px;
-    /* アイテム間のギャップ */
 }
 
 .menu-item {
     flex: 11300px;
-    /* 最小幅を300pxに設定し、最大幅も同じにする */
     max-width: 300px;
-    background-color: #fff;
+    background-color: #1c1c1c;
     margin-bottom: 20px;
     box-shadow: 02px5pxrgba(0, 0, 0, 0.1);
-    transition: box-shadow 0.3s ease-in-out;
+    transition: box-shadow 0.3s ease-in-out, transform 0.3s ease-in-out;
     text-align: left;
     border-radius: 10px;
     overflow: hidden;
@@ -31,6 +26,8 @@
 
 .menu-item:hover {
     box-shadow: 04px15pxrgba(0, 0, 0, 0.2);
+    transform: translateY(-5px);
+    /* 少し持ち上げる効果 */
 }
 
 .menu-item-img {
@@ -48,17 +45,22 @@
 .menu-item-title {
     font-size: 1.2em;
     margin: 0;
-    color: #333;
+    color: #ffffff;
 }
 
 .menu-item-description {
     margin: 5px000;
     font-size: 0.9em;
-    color: #666;
+    color: #dadada;
 }
 
 .menu-item-text {
     text-decoration: none;
     color: inherit;
     display: block;
+    transition: box-shadow 0.3s ease-in-out;
+}
+
+.menu-item-text:hover {
+    box-shadow: 04px15pxrgba(0, 0, 0, 0.2);
 }
