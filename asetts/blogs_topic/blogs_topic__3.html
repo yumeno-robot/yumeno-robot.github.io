@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>yumeno-robot</title>
+    <meta name="author" content="yumeno-robot" />
+    <meta name="description" content="yumeno-robotのBlogです!" />
+    <meta name="keywords" content="yumeno-robot,yumeno-robot blog,yumeno,yumeno blog,blog ,robot,ロボット,ロボカップ,ライトウェイト" />
+    <link rel="icon" href="/asetts/image/icon_images/main_icon.jpg" />
+    <link rel="stylesheet" href="/asetts/css/header.css">
+    <link rel="stylesheet" href="/asetts/css/smartphone.css">
+    <link rel="stylesheet" href="/asetts/css/footer.css">
+    <link rel="stylesheet" href="/asetts/css/styles.css">
+    <link rel="stylesheet" href="/asetts/blogs_topic/blogs_topic_style.css">
+</head>
+
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="logo-section">
+                <a href="./index.html">
+                    <img src="/asetts/image/header_images/home_icon.jpg" alt="Icon" class="icon">
+                </a>
+                <a href="/index.html">
+                    <span class="site-title">yumeno-robot</span>
+                </a>
+            </div>
+            <ul class="menu-links">
+                <li><a href="/index.html">HOME</a></li>
+                <li><a href="/asetts/html/blogs.html">BLOGs</a></li>
+                <li><a href="/asetts/html/photos.html">PHOTOs</a></li>
+                <li><a href="/asetts/html/links.html">LINKs</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="blogs_topic_top">
+        <h1 class="blogs_h1"> 【6CH をArduinoで動かす】</h1>
+        <img src="/asetts/image/blog_images/6chm.png" alt="">
+    </div>
+
+
+
+
+    <section class="all_section">
+
+
+        <ul class="card">
+            <div class="blogs_topic_6ch_start">
+                <h3 class="blogs_topic_h3">【初めに！】</h3>
+                <p>
+                    ・こんにちは！yumeno-robotですー。
+                    今回は、私が中学生時代に最も時間をかけた技術ともいえる「6CH をArduinoで動かす方法」をご紹介します！
+
+                </p>
+
+                <p>
+                    ・このインターネットでほぼすべてのことが解決してしまうこの世の中、
+                    Arduinoで6chモーターコントローラーを動かす方法なんて探せ見つかると思う方も多いと思いますが、
+                    全然見つからないんですよねー。データシートをたくさん読んでシリアル通信の勉強もそれなりにして
+                    やっと発見したものなので参考にできればどうぞ。
+
+                    まあ、別のモータードライバを使えば終わる話なのですがｗ
+                    (↑これはマジで言っちゃいけないことだよ☆)
+
+
+                </p>
+        </ul>
+
+        <ul class="card">
+            <h3 class="blogs_topic_h3">【なぜ6CHを使ったのか】</h3>
+            <p>
+                ・私の所属していた科学部では先輩方の栄光のおかげで「Arduino」「TJ3B」などのマイコンや、
+                「シングルパルスボールセンサー」「ホワイトラインセンサー」などのお高めのセンサーなどがたくさんあり、
+                自分たちの欲しい部品を買うのではなく、今ある部品を使うのが好ましい....
+                みたいな感じだったので、部室に落ちてた「6CHモーターコントローラー」を使うことにしました。
+            </p>
+            </div>
+        </ul>
+
+
+
+        <ul class="card">
+            <h3 class="blogs_topic_h3">
+                【必要部品】
+            </h3>
+
+            <p>
+                ・Arduino<br>
+                ・6CHモーターコントローラー<br>
+                ・ブレットボード<br>
+                ・ケーブル（ジャンパー線）<br>
+                ・電池<br>
+
+            </p>
+
+        </ul>
+
+
+        <ul class="card">
+            <h3 class="blogs_topic_h3">
+                【通信方法について】
+            </h3>
+
+            <p>
+                ・皆さん経験したことある通り、異なる会社の製品同士のマイコンやセンサーなどで遊んでいたりすると、
+                「UART」「SPI」「I2C」などを使わなければならない場合ってありますよね。<br>
+                （ものによってはうまくできなくていやになるやつらですねーーーｗ）<br>
+                なんか、通信方法の説明をしそうな雰囲気ですが長くなるしめんどくさいのでカットします！！
+
+            </p>
+            <p>
+                6CHモーターコントローラーのデーターシートを見てみると<br>
+                ----USART(シリアル)通信19200bps<br>
+                ----I²C 通信インターフェイス装備（100KHzまたは400KHz）<br>
+                の2つの通信方法が使えるそうです。
+
+            </p>
+            <p>
+                私も最初は「I2C通信」でやってたのですが全然うまくいかなかったり、
+                なぜか煙が出てくることもあったので「UART通信」でやることに決まました。<br>
+                (そういえば言ってなかったわ。今回は「UART通信」で動かす説明ですｗ！)
+            </p>
+        </ul>
+
+
+
+        <ul class="card">
+
+            <h3 class="blogs_topic_h3">
+                【Arduino との接続方法】
+            </h3>
+
+            <h3>【ハードウェア】</h3>
+            <p>
+                1．UART通信」通信をするわけですから「TX」「RX」ピンを使用します。<br>
+                ArduinoのRXをモーターコントローラーのTXに接続し、<br>
+                ArduinoのTXをモーターコントローラーのRXに接続する。(図1)<br><br>
+
+                2．電池をモータードライバーとArduinoにつなぐ。<br>
+            </p>
+            <p>(図1)</p>
+            <img src="/asetts/image/blog_images/arduino_start_04_01-1024x528.jpg" alt="" width="450px">
+
+            <br><br><br>
+            <h3>【ソフトウェア】</h3>
+            <p>⇩⇩まずプログラムです⇩⇩</p>
+            <img src="/asetts/image/blog_images/111.png" alt="">
+            <p>
+                3行目でシリアル通信のデータ転送レートをbpsで指定している。つまり通信開始の合図。<br>
+                7行目で実際に("")データに入っているデータを送信している。<br>
+
+            </p>
+
+            <br><br><br>
+            <h3>【転送するデータについて】</h3>
+            <p>
+
+                ・上の写真にある通りプログラムはとても短く済みます。しかし、転送するデータがどうなっているかわからないと思うので解説します。<br><br>
+                1．この文字列は"1R100"、"2R100"、"3F100"、"4F100"、"5R100"、"6R100"と6つに分けて見ます。<br>
+                この1ブロック("1R100")が6つあるモーターの1つを制御するプログラムです。<br>
+                <img src="/asetts/image/blog_images/2222.png" alt=""><br><br><br>
+                2．"1R100"の一番にある「１」は動かすモーターピン番号を示します。<br>
+                モーターピンは6つあるので1から6まで設定できます。<br>
+                <img src="/asetts/image/blog_images/3333.png" alt=""><br><br><br>
+                3．2文字目の「R」「F」は回転方向を示します。<br>
+                「R」は後転。「F」は正転となります。<br>
+                <img src="/asetts/image/blog_images/44444.png" alt=""><br><br><br>
+                4．それ以降の3桁の数「100」や「080」「050」「000」は回転出力を示します。<br>
+                出力は0％から100％まで設定でき必ず3桁にする必要があるため2桁の場合は前に0を追加する必要がある。<br>
+                つまり80％や50％の場合は「080」「050」と設定する必要がある<br>
+                <img src="/asetts/image/blog_images/555555.png" alt=""><br><br><br>
+            </p>
+            <br><br><br>
+            <h3>【練習】</h3>
+            <p>
+                ちょっと複雑ですよね。<br>
+                一緒にやってみましょう！
+            </p>
+
+            <p>
+                1番ピン　正転　100％の出力<br>
+                2番ピン　後転　100％の出力<br>
+                3番ピン　後転　50％の出力<br>
+                4番ピン　後転　77％の出力<br>
+                5番ピン　正転　8％の出力<br>
+                6番ピン　後転　0％の出力<br><br>
+                で回す場合
+            </p>
+            <p>
+                "1F100"<br>
+                "2R100"<br>
+                "3R050"<br>
+                "4R077"<br>
+                "5F008"<br>
+                "6R000"<br><br>
+                となり、それを合わせればいいので<br>
+                <img src="/asetts/image/blog_images/77777.png" alt=""><br><br>
+                となる！！
+            </p>
+
+        </ul>
+
+
+
+
+        <ul class="card">
+
+            <h3 class="blogs_topic_h3">【ライブラリについて】</h3>
+            <p>
+                複雑でわかるずらいですよね。<br>
+                簡単にできるよう、昔よく使っていた自作ライブラリがあるのでもし使えそうなら使ってみてください。<br><br>
+
+                ⇩⇩⇩URL⇩⇩⇩
+            </p>
+            <p> <a
+                    href="https://github.com/yumeno-robot/Arduino_DDK0668T">https://github.com/yumeno-robot/Arduino_DDK0668T</a>
+            </p>
+        </ul>
+
+
+
+
+        <ul class="card">
+            <div class="blogs_topic_2023robot_lastly">
+                <h3 class="blogs_topic_h3">【最後に】</h3>
+                <p>
+                    一様、私のころはこれで動いていました。<br>
+                    もし動かなかったらごめんなさい！<br>
+
+                </p>
+            </div>
+        </ul>
+
+    </section>
+
+
+
+
+
+
+
+
+
+
+</body>
+
+</html>
