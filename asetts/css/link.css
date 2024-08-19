@@ -8,7 +8,8 @@ h1 {
     flex-wrap: wrap;
     justify-content: center;
     gap: 30px;
-    padding: 020px50px;
+    padding: 0 20px 50px;
+    min-height: calc(100vh - 120px);
     /* リンクコンテナの下にも隙間を追加 */
 }
 
@@ -16,6 +17,7 @@ h1 {
     background-color: #1c1c1c;
     border-radius: 10px;
     padding: 20px;
+    height: 12rem;
     text-align: center;
     width: 120px;
     transition: transform 0.3s, box-shadow 0.3s;
@@ -41,5 +43,5 @@ h1 {
 }
 
 .link-item:hover.link-icon {
-    box-shadow: 04px8pxrgba(0, 0, 0, 0.3);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
 }

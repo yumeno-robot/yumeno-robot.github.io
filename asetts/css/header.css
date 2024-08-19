@@ -2,6 +2,7 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
+    height: 70px;
     background: linear-gradient(to bottom right, #000000, #00076e);
     /* グラデーションの色と方向 */
     padding: 10px 20px;

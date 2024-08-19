@@ -10,12 +10,14 @@
     flex-wrap: wrap;
     justify-content: center;
     gap: 20px;
+    min-height: 60vh
 }
 
 .menu-item {
     flex: 11300px;
     max-width: 300px;
     background-color: #1c1c1c;
+    height: 23rem;
     margin-bottom: 20px;
     box-shadow: 02px5pxrgba(0, 0, 0, 0.1);
     transition: box-shadow 0.3s ease-in-out, transform 0.3s ease-in-out;

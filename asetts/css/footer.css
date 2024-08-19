@@ -1,20 +1,16 @@
 /* footer 処理 */
 .main_footer {
     background: rgb(22, 22, 22);
-    position: fixed;
+    padding: 1rem 0;
+    height: 50px;
+    display: block;
     margin-inline: auto;
-    bottom: 0;
-    padding: 10px 0;
-    margin-top: 100px;
 }
 
 .main_footer_P {
     font-family: Georgia, 'Times New Roman', Times, serif;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    padding: 10px;
     margin: 0;
-    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }

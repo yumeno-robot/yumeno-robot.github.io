@@ -1,5 +1,4 @@
 .blogs_topic_member a {
-    color: white;
     text-decoration: none;
 }
 
@@ -32,7 +31,7 @@
 
 
 .all_section {
-    margin: 0px 0px 100px 150px;
+    margin: 0px 150px 100px 150px;
     padding: 0 10px 0 0;
 }
 
