@@ -1,0 +1,111 @@
+.blogs_topic_member a {
+    color: white;
+    text-decoration: none;
+}
+
+.blogs_h1 {
+    font-size: 40px;
+    text-align: center;
+}
+
+.blogs_topic_top>img {
+    width: 100%;
+    /* 幅を50%に設定 */
+    max-height: 400px;
+    /* 高さを最大250pxに設定 */
+    object-fit: cover;
+    display: block;
+    margin: 30px auto;
+    /* 上部の余白を30pxに設定 */
+
+}
+
+.blogs_topic_h3 {
+    padding: 0.25em 0.5em;
+    /*上下 左右の余白*/
+    /*文字色*/
+    background: transparent;
+    /*背景透明に*/
+    border-left: solid 5px #7db4e6;
+    /*左線*/
+}
+
+
+.all_section {
+    margin: 0px 0px 100px 150px;
+    padding: 0 10px 0 0;
+}
+
+.blogs_topic_2023robot_images img {
+    display: inline;
+    width: 400px;
+    height: auto;
+    padding: 0 20px 0 20px;
+
+}
+
+.card {
+    margin: 50px 0px 70px 0px;
+}
+
+
+.blogs_topic_2023robot_software a {
+    color: white;
+    text-decoration: none;
+    font-size: 25px;
+}
+
+
+
+
+
+
+
+@media screen and (max-width:1000px) {
+
+    .blogs_h1 {
+        font-size: 35px;
+        margin-top: 35px;
+        text-align: center;
+    }
+
+
+    .all_section {
+        margin: 0px 0px 50px 0;
+        padding: 0 10px 0 0;
+    }
+
+
+
+    .second_h2 {
+        margin: 0 0 0 0;
+        padding: 0.25em 0.5em;
+        /*上下 左右の余白*/
+        /*文字色*/
+        background: transparent;
+        /*背景透明に*/
+        border-left: solid 5px #7db4e6;
+        /*左線*/
+    }
+
+
+
+    .blogs_topic_2023robot_images img {
+        display: inline;
+        width: 40vw;
+        height: auto;
+        padding: 0 0 0 20px;
+
+    }
+
+
+    .blogs_h1 {
+        font-size: 30px;
+        text-align: center;
+    }
+}
+
+a {
+
+    color: white;
+}
