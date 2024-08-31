@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>yumeno-robot</title>
+    <meta name="author" content="yumeno-robot" />
+    <meta name="description" content="yumeno-robotのBlogです!" />
+    <meta name="keywords" content="yumeno-robot,yumeno-robot blog,yumeno,yumeno blog,blog ,robot,ロボット,ロボカップ,ライトウェイト" />
+    <link rel="icon" href="../asetts/image/icon_images/main_icon.jpg" />
+    <link rel="stylesheet" href="../asetts/css/header.css">
+    <link rel="stylesheet" href="../asetts/css/smartphone.css">
+    <link rel="stylesheet" href="../asetts/css/footer.css">
+    <link rel="stylesheet" href="../asetts/css/styles.css">
+    <link rel="stylesheet" href="../asetts/css/blogs_topic_style.css">
+</head>
+
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="logo-section">
+                <a href="./index.html">
+                    <img src="./asetts/image/header_images/home_icon.jpg" alt="Icon" class="icon">
+                </a>
+                <a href="./index.html">
+                    <span class="site-title">yumeno-robot</span>
+                </a>
+            </div>
+            <ul class="menu-links">
+                <li><a href="./index.html">HOME</a></li>
+                <li><a href="./blogs.html">BLOGs</a></li>
+                <li><a href="./photos.html">PHOTOs</a></li>
+                <li><a href="./links.html">LINKs</a></li>
+            </ul>
+        </nav>
+    </header>
+
+
+    <div class="blogs_topic_top">
+        <h1 class="blogs_h1">【PlatformIOのファイル構成】</h1>
+        <img src="../asetts/image/blog_images/PlatformIO_main-img.png" alt="">
+    </div>
+
+
+    <ul class="card">
+        <div class="blogs_topic_member">
+            <h3 class="blogs_topic_h3">【初めに】</h3>
+        </div>
+
+        <p>
+            今回は私がちょっとだけ苦労した、<br>
+            ・「PlatformIO」とは<br>
+            ・プログラムを書く場所<br>
+            ・library.jsonの書き方<br>
+            を紹介していきます。<br>
+
+        </p>
+
+        <p>
+            プログラムを書く場所やライブラリを保存する場所などはあんまりネットに乗っていなかったと思うので、少し目を通してもいいかもよ！
+
+        </p>
+
+    </ul>
+
+
+
+
+
+
+    <ul class="card">
+        <h3 class="blogs_topic_h3">【PlatformIOとは】</h3>
+        <p>
+            PlatformIOは、組み込み開発向けのオープンソース統合開発環境（IDE）です。<br>
+            特に、Arduino、ESP8266、ESP32、STM32など、さまざまなマイコンボードや開発プラットフォームをサポートしています。<br>
+            また、Visual Studio Code（VS Code）などのエディタで書くこともできます。<br>
+        </p>
+    </ul>
+
+
+
+
+    <ul class="card">
+        <h3 class="blogs_topic_h3">【PlatformIOのメリット】</h3>
+        <p>
+            クロスプラットフォームサポート:<br>
+            ・Windows、macOS、Linuxなど、さまざまなオペレーティングシステム上で動作します。
+        </p><br>
+        <p>
+            多言語サポート:<br>
+            ・C/C++はもちろん、Pythonや他のプログラミング言語でも開発が可能です。
+        </p><br>
+        <p>
+            ボード管理:<br>
+            ・数百種類のマイコンボードをサポートしており、簡単にプロジェクトを開始することができます。新しいボードやフレームワークを簡単に追加できます。
+        </p><br>
+        <p>
+            ライブラリ管理:<br>
+            ・インターネット経由でライブラリを簡単に検索、インストール、更新ができる強力なライブラリ管理システムを提供します。
+        </p><br>
+        <p>
+            ビルドシステム:<br>
+            ・高速かつ柔軟なビルドシステムを持ち、依存関係の管理やコンパイル設定を自動化します。
+        </p><br>
+        <p>
+            単体テスト:<br>
+            ・ プロジェクトの単体テストを簡単に実行できる機能があり、信頼性の高いコードを作成するのに役立ちます。
+        </p><br>
+        <p>
+            デバッグ機能:<br>
+            ・高度なデバッグ機能を提供し、エラーの発見と修正を迅速に行うことができます。
+        </p><br>
+    </ul>
+
+
+    <ul class="card">
+        <h3 class="blogs_topic_h3">【PlatformIOのデメリット】</h3>
+        <p>
+            学習曲線が急:<br>
+            ・PlatformIOは非常に多機能であるため、初心者には取っつきにくい場合があります。
+            特に、Arduino IDEのようなシンプルなツールから移行する場合、設定や使い方に慣れるまで時間がかかることがあります。
+        </p><br>
+        <p>
+            依存関係の管理:<br>
+            ・プロジェクトが大規模になると、ライブラリや依存関係の管理が複雑になることがあります。
+            自動的に依存関係を解決してくれることが多いものの、時には手動での調整が必要になることもあります。
+        </p><br>
+        <p>
+            セットアップが複雑:<br>
+            ・初めてPlatformIOをインストールする際、設定や環境構築がやや複雑に感じることがあります。
+            特に、特定のボードやフレームワークを使用する場合、追加の設定が必要なことがあり、その理解には時間がかかるかもしれません。
+        </p><br>
+        <p>
+            互換性の問題:<br>
+            ・一部の古いライブラリやプラットフォームでは、PlatformIOが公式にサポートしていないか、
+            互換性の問題が生じることがあります。この場合、手動で調整が必要になることがあります。
+        </p><br>
+
+
+
+    </ul>
+
+
+
+
+    <ul class="card">
+        <h3 class="blogs_topic_h3">【ファイル構成について】</h3>
+        <p>
+            最初に書いたネットにあまり乗っていない内容はこれのことです。
+        </p>
+        <p>
+            PlatformIOを追加したものはいいものの、たくさんのファイルが生成され初めはどこに何を書けばよいかわからないと思います。<br>
+            以下にファイル名とその「内容、用途」をまとめてみました。
+        </p><br><br>
+
+
+
+        <h4>.pio フォルダ</h4>
+        <p>
+            内容: PlatformIOによって自動的に生成されるフォルダです。ビルドの際に生成された中間ファイル、オブジェクトファイル、バイナリ、依存関係が含まれます。<br>
+            用途: ビルドやアップロードプロセスで使用されるファイルが保存されるため、通常は手動で編集する必要はありません。<br><br>
+
+        </p>
+        <h4>.vscode フォルダ</h4>
+        <p>
+            内容: Visual Studio
+            Code用の設定ファイルが格納されます。settings.json、tasks.json、launch.jsonなどのファイルがあり、エディタやデバッグの設定が保存されています。<br>
+            用途: Visual Studio Codeの環境をカスタマイズしたり、PlatformIOのビルドタスクやデバッグ設定を管理するために使用されます。<br><br>
+
+        </p>
+        <h4>include フォルダ</h4>
+        <p>
+            内容: プロジェクトで使用するヘッダーファイル（.hファイル）を配置します。これらのファイルは、他のソースファイルで共有される定義や宣言を含みます。<br>
+            用途: コードの再利用性を高めるために、共通の定義や関数プロトタイプを格納します。<br><br>
+
+        </p>
+        <h4>lib フォルダ</h4>
+        <p>
+            内容: プロジェクト専用のカスタムライブラリを配置します。サードパーティのライブラリや自作のライブラリをこのフォルダに配置することで、プロジェクト内で利用できます。<br>
+            用途: 特定のプロジェクトで使用するカスタムライブラリを管理します。各ライブラリはサブフォルダとして配置し、その中にソースコードとヘッダーファイルを含めます。<br><br>
+
+        </p>
+        <h4>src フォルダ</h4>
+        <p>
+            内容: プロジェクトのメインコード（.cpp、.inoファイルなど）が格納されます。通常、main.cppやmain.inoファイルがここに置かれます。<br>
+            用途: プロジェクトの主なソースコードをここに記述します。PlatformIOは、このフォルダ内のファイルをコンパイル対象とします。<br><br>
+
+        </p>
+        <h4>test フォルダ</h4>
+        <p>
+            内容: プロジェクトの単体テストコードを配置します。テストは、Unit Testing Frameworkを使用して実行されます。<br>
+            用途: コードのテストケースを記述し、コードが期待通りに動作するかどうかを確認するために使用されます。<br><br>
+
+        </p>
+    </ul>
+
+    <ul class="card">
+        <h3 class="blogs_topic_h3">【library.jsonについて】</h3>
+
+
+        <h4>・library.jsonとは</h4>
+        <p>
+            library.jsonは、自作ライブラリを他のプロジェクトやユーザーと共有する場合に役立つものです。<br>
+            これを使うことで、ライブラリの管理がしやすくなり、他のプロジェクトで再利用しやすくなります。<br>
+            (必須ではありません。)
+        </p><br><br><br>
+
+
+
+
+        <h4>・library.jsonの書き方</h4>
+        <p>
+            自作ライブラリを作ったら「library.json」を書けと言われますが、<br>
+            jsonファイルなんて書けないですよねー。<br><br>
+
+            ということでテンプレートを作ったので下の表を埋めて自分の環境に合わせてください！<br>
+
+        </p>
+
+
+
+        <img src="../asetts/image/blog_images/test.json.png" width=" 450px">
+        <p>
+            name: ライブラリの名前<br>
+            version: ライブラリのバージョン<br>
+            description: ライブラリの説明<br>
+            authors: 作者の情報<br>
+            license: ライセンス情報（例: MIT, GPL）<br>
+            dependencies: 他のライブラリの依存関係<br>
+        </p>
+    </ul>
+
+
+    <ul class="card">
+        <h3 class="blogs_topic_h3">【最後に】</h3>
+
+        <p>
+            これ１時間で書いたｗｗｗｗ！！<br>
+            どれぐらいで書けるか実験したくてｗ<br>
+        </p>
+    </ul>
+
+    <footer class="main_footer" id="footer">
+        <p class="main_footer_P">yumeno-robot</p>
+    </footer>
+
+    <script src="./asetts/javascript/script.js"></script>
+</body>
+
+</html>
