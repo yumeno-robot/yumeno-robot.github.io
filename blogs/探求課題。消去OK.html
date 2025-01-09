@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>占いアプリ</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f0f0f0;
+        }
+        .container {
+            text-align: center;
+            background: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        .question {
+            margin-bottom: 10px;
+        }
+        .typing-field {
+            margin-bottom: 20px;
+        }
+        .hidden {
+            display: none;
+        }
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        button:disabled {
+            background-color: #ccc;
+            cursor: not-allowed;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div id="start-screen">
+            <h1>占いスタート</h1>
+            <button id="start-button">スタート</button>
+        </div>
+
+        <div id="question-screen" class="hidden">
+            <h2>質問に答えてください</h2>
+            <h3>※数字は半角で入力すること※</h3>
+            <div id="questions"></div>
+            <button id="submit-button" disabled>送信</button>
+        </div>
+
+        <div id="loading-screen" class="hidden">
+            <h2>処理中...</h2>
+        </div>
+
+        <div id="result-screen" class="hidden">
+            <h2>結果</h2>
+            <p>あなたは比較的に勤勉で人から信頼されるタイプでわりと凡帳面ですが、心が乱れるとどうでもいいやと投げ出す一面があります。<br>
+                運良く小さな成功をすることがあっても、どちらかと言えば忍耐と努力でチャンスを掴んでいくタイプです。<br>
+                それに加え、相手により話し方やコミュニケーション方法を変える気遣いができる人です。<br>
+                また、あなたは他人から好かれたい、賞賛されたいと思っていますが、それにかかわらず自分自身に批判的な傾向があり、<br>
+                条件が整えば外交的で社交的ですが、条件が整わなければ内向的で遠慮しがちです。</p>
+            <button id="reset-button">終了</button>
+        </div>
+    </div>
+
+    <script>
+        const startButton = document.getElementById('start-button');
+        const submitButton = document.getElementById('submit-button');
+        const resetButton = document.getElementById('reset-button');
+
+        const startScreen = document.getElementById('start-screen');
+        const questionScreen = document.getElementById('question-screen');
+        const loadingScreen = document.getElementById('loading-screen');
+        const resultScreen = document.getElementById('result-screen');
+        const questionsContainer = document.getElementById('questions');
+
+        const questions = [
+            'あなたの血液型は？',
+            'あなたは何座？'
+        ];
+
+        function generateQuestions() {
+            questionsContainer.innerHTML = '';
+            questions.forEach((q, index) => {
+                const questionDiv = document.createElement('div');
+                questionDiv.classList.add('question');
+                questionDiv.innerHTML = `
+                    <p>${index + 1}. ${q}</p>
+                    <input type="text" class="typing-field" data-index="${index}">
+                `;
+                questionsContainer.appendChild(questionDiv);
+            });
+        }
+
+        function areAllQuestionsAnswered() {
+            const fields = document.querySelectorAll('.typing-field');
+            return Array.from(fields).every(field => field.value.trim() !== '');
+        }
+
+        startButton.addEventListener('click', () => {
+            startScreen.classList.add('hidden');
+            questionScreen.classList.remove('hidden');
+            generateQuestions();
+        });
+
+        questionsContainer.addEventListener('input', () => {
+            submitButton.disabled = !areAllQuestionsAnswered();
+        });
+
+        submitButton.addEventListener('click', () => {
+            questionScreen.classList.add('hidden');
+            loadingScreen.classList.remove('hidden');
+
+            const delay = Math.random() * (5000 - 1000) + 1000; // 1秒から5秒間
+
+            setTimeout(() => {
+                loadingScreen.classList.add('hidden');
+                resultScreen.classList.remove('hidden');
+            }, delay);
+        });
+
+        resetButton.addEventListener('click', () => {
+            resultScreen.classList.add('hidden');
+            startScreen.classList.remove('hidden');
+        });
+    </script>
+</body>
+</html>
